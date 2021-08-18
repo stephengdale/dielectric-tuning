@@ -17,8 +17,8 @@ def genAll(FileName="CH3"):
     cat = FileName + "+"
     neu = FileName
     
-    xyz_cat = "".join(open("/home/stephen/git/refdata/20_mbcc_vie/" + cat + ".xyz", 'r').readlines()[1:]) + 'symmetry c1'
-    xyz_neu = "".join(open("/home/stephen/git/refdata/20_mbcc_vie/" + neu + ".xyz", 'r').readlines()[1:]) + 'symmetry c1'
+    xyz_cat = "".join(open("~/git/refdata/20_mbcc_vie/" + cat + ".xyz", 'r').readlines()[1:]) + 'symmetry c1'
+    xyz_neu = "".join(open("~/git/refdata/20_mbcc_vie/" + neu + ".xyz", 'r').readlines()[1:]) + 'symmetry c1'
     psi4.set_output_file(neu + ".out")
     psi4.set_options({  'reference' : 'uks'})
     X = np.arange(0.,1.01,0.01)
